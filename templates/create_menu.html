@@ -1,0 +1,10 @@
+{% extends 'index.html' %}
+{% block tittle %} Create Menu {% endblock tittle %}
+{% block body %}
+    <p>Create Menu: </p>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Create</button>
+    </form>
+{% endblock body %}
