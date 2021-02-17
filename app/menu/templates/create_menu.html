@@ -1,0 +1,27 @@
+{% extends 'index.html' %}
+{% block tittle %} Create Menu {% endblock tittle %}
+{% block body %}
+    <div>
+        <p>Create Menu: </p>
+        <form method="post">
+            {% csrf_token %}
+            <table border="2">
+                <tbody>
+                <tr>
+                    <td>{{ form.as_p }}</td>
+                </tr>
+                </tbody>
+            </table>
+            <table border="0">
+                <tbody>
+                <tr>
+                    <td width="81%">{{ '' }}</td>
+                    <td width="30">
+                        <button type="submit">Create</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+{% endblock body %}

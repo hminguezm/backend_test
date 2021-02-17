@@ -1,3 +1,10 @@
+import uuid
+from datetime import datetime
+
 from django.db import models
 
-# Create your models here.
+
+class Lunch(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False, blank=True)
+    name = models.CharField(max_length=100)
+    create_at = models.DateField("Date", default=datetime.utcnow())

@@ -1,7 +1,7 @@
 {% extends 'index.html' %}
-{% block tittle %} Create Menu {% endblock tittle %}
+{% block tittle %} {% endblock tittle %}
 {% block body %}
-    <p>Create Menu: </p>
+    <p>Create Lunch: </p>
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}

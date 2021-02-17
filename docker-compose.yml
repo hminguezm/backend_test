@@ -1,0 +1,21 @@
+version: "3.7"
+
+services:
+  postgres:
+    image: postgres:12.3-alpine
+    container_name: postgres
+    restart: always
+    environment:
+        POSTGRES_USER: postgres
+        POSTGRES_PASSWORD: postgres
+        POSTGRES_DB: backend-test
+    volumes:
+        - ${PWD}/:/postgres
+    ports:
+      - "5432:5432"
+    networks:
+      - web
+
+networks:
+  web:
+    driver: bridge

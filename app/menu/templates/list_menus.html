@@ -1,0 +1,28 @@
+{% extends 'index.html' %}
+{% block tittle %} List of menus {% endblock tittle %}
+{% block body %}
+    <div>
+        <H1> Menus </H1>
+        <table border="2">
+            <thead>
+            <tr>
+                <th>lunches</th>
+                <th>Published at</th>
+                <th>Created at</th>
+                <th>Options</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for menu in menus %}
+                <tr>
+                    <td>{{ menu.lunches }}</td>
+                    <td>{{ menu.published_at }}</td>
+                    <td>{{ menu.created_at }}</td>
+                    <td><a href="{% url 'edit_menu' menu.menu_id %}">Edit</a> | <a href="">Delete</a></td>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock body %}
