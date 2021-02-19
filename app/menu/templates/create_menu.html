@@ -8,7 +8,14 @@
             <table border="2">
                 <tbody>
                 <tr>
-                    <td>{{ form.as_p }}</td>
+                    <td>
+                        <div>
+                            <div align="right">
+                                <a href="{% url 'create_lunch' %}"> Add new lunch </a>
+                            </div>
+                                {{ form.as_p }}
+                        </div>
+                    </td>
                 </tr>
                 </tbody>
             </table>

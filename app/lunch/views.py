@@ -1,20 +1,17 @@
-from datetime import datetime
-
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Lunch
 from .forms import LunchForm
 
 
 def createLunch(request):
-    template_name = 'create_menu.html'
+    template_name = 'create_lunch.html'
     if request.method == 'GET':
         form = LunchForm()
     else:
         form = LunchForm(request.POST)
-
         if form.is_valid():
             form.save()
-            print('Saved')
+        return redirect('create_menu')
 
     return render(request, template_name, {'form': form})
 

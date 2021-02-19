@@ -1,0 +1,25 @@
+{% extends 'index.html' %}
+{% block tittle %} Order list {% endblock tittle %}
+{% block body %}
+    <div>
+        <H1> Orders </H1>
+        <table border="2">
+            <thead>
+            <tr>
+                <th>Applicant Name</th>
+                <th>Meals</th>
+                <th>Comment</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for order in orders %}
+                <tr>
+                    <td>{{ order.applicant_name }}</td>
+                    <td>{{ order.meal }}</td>
+                    <td>{{ order.comment }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock body %}

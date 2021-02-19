@@ -18,11 +18,25 @@
                     <td>{{ menu.lunches }}</td>
                     <td>{{ menu.published_at }}</td>
                     <td>{{ menu.created_at }}</td>
-                    <td><a href="{% url 'edit_menu' menu.menu_id %}">Edit</a> | <a href="">Delete</a></td>
+                    <td><a href="{% url 'edit_menu' menu.menu_id %}">Edit</a> | <a href="">Send</a></td>
                     </td>
                 </tr>
             {% endfor %}
             </tbody>
+        </table>
+        <table border="0">
+            <thead>
+            <tr>
+                <th>
+                    <a href="{% url 'list_order' %}">Go to orders</a>
+                </th>
+                <th></th>
+                <th></th>
+                <th>
+                    <a href="{% url 'create_menu' %}">Create new menu</a>
+                </th>
+            </tr>
+            </thead>
         </table>
     </div>
 {% endblock body %}
