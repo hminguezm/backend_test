@@ -1,6 +1,7 @@
 Cornersho Back-end test
 
-A Django application up Docker.
+A Django application, its a bit solution by
++ [challenge](./desafio.txt)
 
 ## Requirements
 
