@@ -38,13 +38,13 @@ def createMenu(request):
         form.date = datetime.now()
         if form.is_valid():
             form.save()
-
+            send_menu()
         return redirect('index')
 
     return render(request, template_name, {'form': form})
 
 
-def editMenu(request, menu_id):
+def editMenu(request, menu_id: str):
     template_name = 'create_menu.html'
     menu = Menu.objects.get(id=menu_id)
     if request.method == 'GET':

@@ -18,7 +18,8 @@
                     <td>{{ menu.lunches }}</td>
                     <td>{{ menu.published_at }}</td>
                     <td>{{ menu.created_at }}</td>
-                    <td><a href="{% url 'edit_menu' menu.menu_id %}">Edit</a> | <a href="">Send</a></td>
+                    <td>
+                        <a href="{% url 'edit_menu' menu.menu_id %}">Edit</a>
                     </td>
                 </tr>
             {% endfor %}

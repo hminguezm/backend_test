@@ -27,5 +27,3 @@ class Menu(models.Model):
     class Meta:
         ordering = ['published_at']
 
-    def __str__(self):
-        return 'Publish: {} Created: {}'.format(self.published_at, self.create_at)

@@ -1,3 +1,8 @@
 from django.test import TestCase
 
-# Create your tests here.
+from .models import Lunch
+
+
+class LunchTestCase(TestCase):
+    def setUp(self):
+        Lunch.objects.create(name="Coca Cola")
